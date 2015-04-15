@@ -2301,7 +2301,7 @@ function publishExternalAPI(angular) {
  * Wraps a raw DOM element or HTML string as a [jQuery](http://jquery.com) element.
  *
  * If jQuery is available, `angular.element` is an alias for the
- * [jQuery](http://api.jquery.com/jQuery/) function. If jQuery is not available, `angular.element`
+ * [jQuery](http://apijquery.com/jQuery/) function. If jQuery is not available, `angular.element`
  * delegates to Angular's built-in subset of jQuery, called "jQuery lite" or "jqLite."
  *
  * <div class="alert alert-success">jqLite is a tiny, API-compatible subset of jQuery that allows
@@ -2316,41 +2316,41 @@ function publishExternalAPI(angular) {
  * ## Angular's jqLite
  * jqLite provides only the following jQuery methods:
  *
- * - [`addClass()`](http://api.jquery.com/addClass/)
- * - [`after()`](http://api.jquery.com/after/)
- * - [`append()`](http://api.jquery.com/append/)
- * - [`attr()`](http://api.jquery.com/attr/) - Does not support functions as parameters
- * - [`bind()`](http://api.jquery.com/bind/) - Does not support namespaces, selectors or eventData
- * - [`children()`](http://api.jquery.com/children/) - Does not support selectors
- * - [`clone()`](http://api.jquery.com/clone/)
- * - [`contents()`](http://api.jquery.com/contents/)
- * - [`css()`](http://api.jquery.com/css/) - Only retrieves inline-styles, does not call `getComputedStyle()`
- * - [`data()`](http://api.jquery.com/data/)
- * - [`detach()`](http://api.jquery.com/detach/)
- * - [`empty()`](http://api.jquery.com/empty/)
- * - [`eq()`](http://api.jquery.com/eq/)
- * - [`find()`](http://api.jquery.com/find/) - Limited to lookups by tag name
- * - [`hasClass()`](http://api.jquery.com/hasClass/)
- * - [`html()`](http://api.jquery.com/html/)
- * - [`next()`](http://api.jquery.com/next/) - Does not support selectors
- * - [`on()`](http://api.jquery.com/on/) - Does not support namespaces, selectors or eventData
- * - [`off()`](http://api.jquery.com/off/) - Does not support namespaces or selectors
- * - [`one()`](http://api.jquery.com/one/) - Does not support namespaces or selectors
- * - [`parent()`](http://api.jquery.com/parent/) - Does not support selectors
- * - [`prepend()`](http://api.jquery.com/prepend/)
- * - [`prop()`](http://api.jquery.com/prop/)
- * - [`ready()`](http://api.jquery.com/ready/)
- * - [`remove()`](http://api.jquery.com/remove/)
- * - [`removeAttr()`](http://api.jquery.com/removeAttr/)
- * - [`removeClass()`](http://api.jquery.com/removeClass/)
- * - [`removeData()`](http://api.jquery.com/removeData/)
- * - [`replaceWith()`](http://api.jquery.com/replaceWith/)
- * - [`text()`](http://api.jquery.com/text/)
- * - [`toggleClass()`](http://api.jquery.com/toggleClass/)
- * - [`triggerHandler()`](http://api.jquery.com/triggerHandler/) - Passes a dummy event object to handlers.
- * - [`unbind()`](http://api.jquery.com/unbind/) - Does not support namespaces
- * - [`val()`](http://api.jquery.com/val/)
- * - [`wrap()`](http://api.jquery.com/wrap/)
+ * - [`addClass()`](http://apijquery.com/addClass/)
+ * - [`after()`](http://apijquery.com/after/)
+ * - [`append()`](http://apijquery.com/append/)
+ * - [`attr()`](http://apijquery.com/attr/) - Does not support functions as parameters
+ * - [`bind()`](http://apijquery.com/bind/) - Does not support namespaces, selectors or eventData
+ * - [`children()`](http://apijquery.com/children/) - Does not support selectors
+ * - [`clone()`](http://apijquery.com/clone/)
+ * - [`contents()`](http://apijquery.com/contents/)
+ * - [`css()`](http://apijquery.com/css/) - Only retrieves inline-styles, does not call `getComputedStyle()`
+ * - [`data()`](http://apijquery.com/data/)
+ * - [`detach()`](http://apijquery.com/detach/)
+ * - [`empty()`](http://apijquery.com/empty/)
+ * - [`eq()`](http://apijquery.com/eq/)
+ * - [`find()`](http://apijquery.com/find/) - Limited to lookups by tag name
+ * - [`hasClass()`](http://apijquery.com/hasClass/)
+ * - [`html()`](http://apijquery.com/html/)
+ * - [`next()`](http://apijquery.com/next/) - Does not support selectors
+ * - [`on()`](http://apijquery.com/on/) - Does not support namespaces, selectors or eventData
+ * - [`off()`](http://apijquery.com/off/) - Does not support namespaces or selectors
+ * - [`one()`](http://apijquery.com/one/) - Does not support namespaces or selectors
+ * - [`parent()`](http://apijquery.com/parent/) - Does not support selectors
+ * - [`prepend()`](http://apijquery.com/prepend/)
+ * - [`prop()`](http://apijquery.com/prop/)
+ * - [`ready()`](http://apijquery.com/ready/)
+ * - [`remove()`](http://apijquery.com/remove/)
+ * - [`removeAttr()`](http://apijquery.com/removeAttr/)
+ * - [`removeClass()`](http://apijquery.com/removeClass/)
+ * - [`removeData()`](http://apijquery.com/removeData/)
+ * - [`replaceWith()`](http://apijquery.com/replaceWith/)
+ * - [`text()`](http://apijquery.com/text/)
+ * - [`toggleClass()`](http://apijquery.com/toggleClass/)
+ * - [`triggerHandler()`](http://apijquery.com/triggerHandler/) - Passes a dummy event object to handlers.
+ * - [`unbind()`](http://apijquery.com/unbind/) - Does not support namespaces
+ * - [`val()`](http://apijquery.com/val/)
+ * - [`wrap()`](http://apijquery.com/wrap/)
  *
  * ## jQuery/jqLite Extras
  * Angular also provides the following additional methods and events to both jQuery and jqLite:
@@ -2517,7 +2517,7 @@ function JQLite(element) {
   }
   if (!(this instanceof JQLite)) {
     if (argIsString && element.charAt(0) != '<') {
-      throw jqLiteMinErr('nosel', 'Looking up elements via selectors is not supported by jqLite! See: http://docs.angularjs.org/api/angular.element');
+      throw jqLiteMinErr('nosel', 'Looking up elements via selectors is not supported by jqLite! See: http://docs.angularjs.orghttp://www.godj.nogole.com/api/angular.element');
     }
     return new JQLite(element);
   }
@@ -8197,7 +8197,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
 
             // If the replaced element is also the jQuery .context then replace it
             // .context is a deprecated jQuery api, so we should set it only when jQuery set it
-            // http://api.jquery.com/context/
+            // http://apijquery.com/context/
             if ($rootElement.context === firstElementToRemove) {
               $rootElement.context = newNode;
             }
@@ -10152,7 +10152,7 @@ function $InterpolateProvider() {
           throw $interpolateMinErr('noconcat',
               "Error while interpolating: {0}\nStrict Contextual Escaping disallows " +
               "interpolations that concatenate multiple expressions when a trusted value is " +
-              "required.  See http://docs.angularjs.org/api/ng.$sce", text);
+              "required.  See http://docs.angularjs.orghttp://www.godj.nogole.com/api/ng.$sce", text);
       }
 
       if (!mustHaveExpression || expressions.length) {
@@ -13082,7 +13082,7 @@ function $ParseProvider() {
  * - `finally(callback, notifyCallback)` – allows you to observe either the fulfillment or rejection of a promise,
  *   but to do so without modifying the final value. This is useful to release resources or do some
  *   clean-up that needs to be done whether the promise was rejected or resolved. See the [full
- *   specification](https://github.com/kriskowal/q/wiki/API-Reference#promisefinallycallback) for
+ *   specification](https://github.com/kriskowal/q/wikihttp://www.godj.nogole.com/api-Reference#promisefinallycallback) for
  *   more information.
  *
  * # Chaining promises
@@ -15672,7 +15672,7 @@ function $SceProvider() {
       throw $sceMinErr('iequirks',
         'Strict Contextual Escaping does not support Internet Explorer version < 11 in quirks ' +
         'mode.  You can fix this by adding the text <!doctype html> to the top of your HTML ' +
-        'document.  See http://docs.angularjs.org/api/ng.$sce for more information.');
+        'document.  See http://docs.angularjs.orghttp://www.godj.nogole.com/api/ng.$sce for more information.');
     }
 
     var sce = shallowCopy(SCE_CONTEXTS);
@@ -16361,7 +16361,7 @@ var originUrl = urlResolve(window.location.href);
  * Parsing means that the anchor node's host, hostname, protocol, port, pathname and related
  * properties are all populated to reflect the normalized URL.  This approach has wide
  * compatibility - Safari 1+, Mozilla 1+, Opera 7+,e etc.  See
- * http://www.aptana.com/reference/html/api/HTMLAnchorElement.html
+ * http://www.aptana.com/reference/htmlhttp://www.godj.nogole.com/api/HTMLAnchorElement.html
  *
  * Implementation Notes for IE
  * ---------------------------
@@ -16380,8 +16380,8 @@ var originUrl = urlResolve(window.location.href);
  * method and IE < 8 is unsupported.
  *
  * References:
- *   http://developer.mozilla.org/en-US/docs/Web/API/HTMLAnchorElement
- *   http://www.aptana.com/reference/html/api/HTMLAnchorElement.html
+ *   http://developer.mozilla.org/en-US/docs/Webhttp://www.godj.nogole.com/api/HTMLAnchorElement
+ *   http://www.aptana.com/reference/htmlhttp://www.godj.nogole.com/api/HTMLAnchorElement.html
  *   http://url.spec.whatwg.org/#urlutils
  *   https://github.com/angular/angular.js/pull/2902
  *   http://james.padolsey.com/javascript/parsing-urls-with-the-dom/
@@ -19747,7 +19747,7 @@ function baseInputType(scope, element, attr, ctrl, $sniffer, $browser) {
 
   // In composition mode, users are still inputing intermediate text buffer,
   // hold the listener until composition is done.
-  // More about composition events: https://developer.mozilla.org/en-US/docs/Web/API/CompositionEvent
+  // More about composition events: https://developer.mozilla.org/en-US/docs/Webhttp://www.godj.nogole.com/api/CompositionEvent
   if (!$sniffer.android) {
     var composing = false;
 
@@ -22682,7 +22682,7 @@ is set to `true`. The parse error is stored in `ngModel.$error.parse`.
  *   var value = modelValue || viewValue;
  *
  *   // Lookup user by username
- *   return $http.get('/api/users/' + value).
+ *   return $http.get('http://www.godj.nogole.com/api/users/' + value).
  *      then(function resolved() {
  *        //username exists, this means validation fails
  *        return $q.reject('exists');

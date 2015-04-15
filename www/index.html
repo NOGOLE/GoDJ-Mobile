@@ -29,11 +29,12 @@
 
         <title>GoDJ</title>
     </head>
-    <body ng-app="godj">
+    <body ng-app="godj"  ng-controller="requestController">
+      <div id ="dj-request" >
+      </div>
 
 
-
-<div  ng-controller="requestController" data-ng-init="init()">
+<div >
 
 <div class ="container-fluid">
 <h2>Make Your Requests Known</h2>
@@ -70,7 +71,10 @@
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+        <script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
         <script type="text/javascript" src="bower_components/larapush/build/larapush.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
         <script>
     var counter = 0;
     var larapush = new Larapush('ws://godj.nogole.com:8080');
