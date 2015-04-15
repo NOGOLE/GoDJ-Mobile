@@ -24,21 +24,68 @@
         <meta name="msapplication-tap-highlight" content="no" />
         <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
         <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
-        <title>Hello World</title>
+
+        <title>GoDJ</title>
     </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+    <body ng-app="godj">
+
+
+
+<div  ng-controller="requestController" data-ng-init="init()">
+
+<div class ="container-fluid">
+<h2>Make Your Requests Known</h2>
+
+  <div class="request">
+  <h3>Song Request</h3>
+<form role="form">
+  <div class="form-group">
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="song_requestor_name" placeholder="Your Name"><br><br>
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="song_title" placeholder="Song Title"><br><br>
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="song_artist" placeholder="Artist"><br><br>
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="song_dj_id" placeholder="DJ Name"><br><br>
+<input  ng-click="submitSong() " type="submit"  value="Submit Request" class="btn btn-primary">
+</div>
+</form>
+
+</div>
+<div class="request">
+<h3>Mood Request</h3>
+<form  role="form" >
+  <div class="form-group">
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="mood_requestor_name" placeholder="Your Name"><br><br>
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="mood_title" placeholder="What Mood?"><br><br>
+<input class="request_form_field form-control row col-xs-" type="text" ng-model="mood_dj_id" placeholder="DJ Name"><br><br>
+<input  ng-click="submitMood() " type="submit" value="Submit Request" class="btn btn-primary">
+</div>
+</form>
+
+</div>
+
+</div>
+</div>
+
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
-        <script type="text/javascript" src="bower_components/larapush/larapush.min.js"></script>
+
+        <script type="text/javascript" src="bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="bower_components/larapush/build/larapush.min.js"></script>
+        <script>
+    var counter = 0;
+    var larapush = new Larapush('ws://godj.nogole.com:8080');
+    larapush.watch('demo').on('generic.event', function(msgEvent){
+    var div = document.getElementById("dj-request");
+    var par = document.createElement('p');
+    par.innerText = msgEvent.message;
+    par.id= counter.toString();
+    div.appendChild(par);
+    if(counter > 1) {
+    var lastElement = document.getElementById((counter - 2).toString());
+    div.removeChild(lastElement);
+    }
+      counter++;
+    });
+    </script>
     </body>
 </html>
