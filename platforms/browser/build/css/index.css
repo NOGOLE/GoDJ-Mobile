@@ -1,0 +1,52 @@
+
+#dj-request {
+text-align:center;
+font-size:medium;
+}
+
+body {
+
+	color: #FFFFFF;
+	font: normal 10pt "Trebuchet MS",Helvetica,sans-serif;
+
+       background-image:url(../img/background.jpg) ;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+  }
+
+  h3 {
+    align: center;
+    color:white;
+    margin: 16px 0 0 0;
+  }
+		.request {
+      width: 300px;
+	margin: 0 auto;
+    }
+
+		.request_form_field {
+		color: #665;
+
+		}
+
+
+                h1 {
+                        font-size: 32px;
+                        margin: 16px 0 0 0;
+                        color:white;
+                }
+
+
+	.container {
+
+	font-size: 1.0em;
+	text-align: center;
+//	left:40%;
+	//border-top: 1px solid #C9E0ED;
+	}
+
+	.table {
+	color:#000;
+	}
